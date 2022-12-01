@@ -4,27 +4,35 @@ import { theme } from './theme'
 const GlobalStyles = createGlobalStyle`
     @font-face {
         font-family: 'graphik';
-        src: url('../assets/fonts/GraphikThin.ttf');
+        src: url('/fonts/GraphikThin.ttf');
         font-weight:  ${theme.weight.thin};
         font-style: normal;
     }
     @font-face {
         font-family: 'graphik';
-        src: url('../assets/fonts/GraphikRegular.ttf');
+        src: url('/fonts/GraphikRegular.ttf');
         font-weight: ${theme.weight.normal};
         font-style: normal;
     }
     @font-face {
         font-family: 'graphik';
-        src: url('../assets/fonts/GraphikBlack.ttf');
+        src: url('/fonts/GraphikBlack.ttf');
         font-weight: ${theme.weight.bold};
         font-style: normal;
     }
     @font-face {
         font-family: 'graphik';
-        src: url('../assets/fonts/GraphikSuper.ttf');
+        src: url('/fonts/GraphikSuper.ttf');
         font-weight: ${theme.weight.superbold};
         font-style: normal;
+    }
+
+    *, *::before, *::after {
+        box-sizing: border-box;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        margin: 0;
+        padding: 0;
     }
 
     html, body, div, span, applet, object, iframe,
@@ -52,8 +60,10 @@ const GlobalStyles = createGlobalStyle`
         display: block;
     }
     body {
-        line-height: 1;
+        position: relative;
         font-family: 'graphik';
+        color: var(--color-black);
+        background-color: var(--color-white);
     }
 
     ol, ul {

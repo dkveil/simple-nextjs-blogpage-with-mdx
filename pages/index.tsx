@@ -1,9 +1,13 @@
-import { Container } from '../containers/container';
+import About from '../components/homepage/about';
+import Hero from '../components/homepage/hero';
+import FeaturedPosts from '../components/homepage/featuredposts';
 
 export default function Home() {
     return (
         <>
-            <Container>test</Container>
+            <Hero />
+            <About />
+            <FeaturedPosts />
         </>
     );
 }
