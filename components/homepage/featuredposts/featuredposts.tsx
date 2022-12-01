@@ -2,8 +2,9 @@ import { Container } from '../../../containers/container';
 import { ContentWrapper, ContentContainer, Wrapper } from './featureposts.styles';
 import PostGrid from '../../posts/postgrid';
 import Button from '../../common/button/button';
+import { IPostData } from '../../../utils/mdx';
 
-const FeaturedPosts = () => {
+const FeaturedPosts = ({ posts }: { posts: IPostData[] }) => {
     return (
         <Wrapper>
             <Container>
@@ -20,7 +21,7 @@ const FeaturedPosts = () => {
                         </p>
                         <Button href="/posts">More</Button>
                     </ContentWrapper>
-                    <PostGrid />
+                    <PostGrid posts={posts} />
                 </ContentContainer>
             </Container>
         </Wrapper>

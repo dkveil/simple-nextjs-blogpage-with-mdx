@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Wrapper = styled.section`
     height: calc(100vh - 120px);
     width: 100%;
-    padding-top: 40px;
+    padding-top: 120px;
 `
 
 export const ContentWrapper = styled.div`

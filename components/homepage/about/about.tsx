@@ -8,7 +8,7 @@ const About = () => {
         <Wrapper>
             <Container>
                 <ImageContainer>
-                    <Image alt="about" src="/images/about.jpg" layout="fill" objectFit="cover" />
+                    <Image alt="about" src="/images/about.jpg" layout="fill" objectFit="cover" sizes="" />
                 </ImageContainer>
                 <ContentWrapper>
                     <h2>about me</h2>

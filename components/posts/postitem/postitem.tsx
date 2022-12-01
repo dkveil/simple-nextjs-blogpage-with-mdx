@@ -11,20 +11,28 @@ interface IPostItem {
 }
 
 const PostItem = ({ title, slug, image, categories, date }: IPostItem) => {
+    const formattedDate = new Date(date).toLocaleDateString('en-US', {
+        day: 'numeric',
+        month: 'long',
+        year: 'numeric',
+    });
+
+    const linkPath = `/posts/${slug}`;
+
     return (
         <li>
             <Wrapper>
-                <Link href={slug}>
+                <Link href={linkPath}>
                     <ImageContainer>
                         <Image alt="about" src={image} layout="fill" objectFit="cover" />
                     </ImageContainer>
                 </Link>
                 <ContentWrapper>
-                    <Link href={slug}>
+                    <Link href={linkPath}>
                         <h3>{title}</h3>
                     </Link>
                     <div>
-                        <time>20 mins ago</time>
+                        <time>{formattedDate}</time>
                         <span>{categories.join(',')}</span>
                     </div>
                 </ContentWrapper>

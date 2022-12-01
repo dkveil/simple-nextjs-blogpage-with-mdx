@@ -64,6 +64,7 @@ const GlobalStyles = createGlobalStyle`
         font-family: 'graphik';
         color: var(--color-black);
         background-color: var(--color-white);
+        overflow-x: hidden;
     }
 
     ol, ul {
